@@ -1,17 +1,14 @@
 class Api::ExamplePagesController < ApplicationController
   def hello_method
-    render json: {message: 'Here are some different ways to say hello:',
-      ways: [{"Spanish" => "Hola"}, {"Italian" => "Salve"}]
-    } 
+    render 'hello_view.json.jbuilder'
   end
 
   def welcome_method
-    time = Time.now.strftime("%A, %d %b %Y %l:%M %p %A")
-    render json: {message: 'Welcome to my rails app!',
-      the_time: time}
+    @time = Time.now.strftime("%A, %d %b %Y %l:%M %p %A")
+    render 'welcome_view.json.jbuilder'
   end
 
   def bonjour_method
-    render json: {message: 'Bonjour!'}
+    render 'bonjour_view.json.jbuilder'
   end
 end
