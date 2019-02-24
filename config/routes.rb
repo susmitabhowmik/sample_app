@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   get '/hello_url' => 'api/example_pages#hello_method'
   get '/welcome_url' => 'api/example_pages#welcome_method'
+  get '/bonjour_url' => 'api/example_pages#bonjour_method'
 end

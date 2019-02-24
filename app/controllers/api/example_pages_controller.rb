@@ -7,5 +7,7 @@ class Api::ExamplePagesController < ApplicationController
     render json: {message: 'Welcome to my rails app!'}
   end
 
-
+  def bonjour_method
+    render json: {message: 'Bonjour!'}
+  end
 end
