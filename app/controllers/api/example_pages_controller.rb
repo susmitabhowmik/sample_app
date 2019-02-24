@@ -1,6 +1,8 @@
 class Api::ExamplePagesController < ApplicationController
   def hello_method
-    render json: {message: 'Hello'}
+    render json: {message: 'Here are some different ways to say hello:',
+      ways: [{"Spanish" => "Hola"}, {"Italian" => "Salve"}]
+    } 
   end
 
   def welcome_method
