@@ -6,7 +6,9 @@ class Api::ExamplePagesController < ApplicationController
   end
 
   def welcome_method
-    render json: {message: 'Welcome to my rails app!'}
+    time = Time.now.strftime("%A, %d %b %Y %l:%M %p %A")
+    render json: {message: 'Welcome to my rails app!',
+      the_time: time}
   end
 
   def bonjour_method
